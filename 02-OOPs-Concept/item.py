@@ -11,7 +11,7 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero"
         
         # Assign to self object
-        self._name = name
+        self.__name = name
         self.price = price
         self.quantity = quantity
         #print(f'An instance created: {name}')
@@ -22,7 +22,16 @@ class Item:
     @property
     # Property Decorator = Only Read Only Attribute
     def name(self):
-        return self._name 
+        return self.__name 
+    
+    @name.setter
+    # Allows to set new name
+    def name(self, value):
+        if len(value) > 10:
+            raise Exception("The name is too long")
+        else:
+            self.__name = value
+
 
 
 

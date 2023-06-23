@@ -1,9 +1,15 @@
 from item import Item
 
 item1 = Item("MyItem", 750, 2)
-item1._name = "Other Item" # Will throw erro
+#item1.name = "Other Item" # Will throw erro
 print(item1.name)
+#print(item1._name)
+#print(item1.__name) # Will throw error
 
+# Getting an attribute
+print(item1.name)
+# Setting an attribute  
+item1.name = "Other Item" # Will throw erro
 
 # item1.name = "OtherItem" # We should have error when we try to instantiate or change attribute again
 # print(item1.read_only_name)
