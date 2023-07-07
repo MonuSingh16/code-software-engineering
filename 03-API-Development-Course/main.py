@@ -6,6 +6,9 @@ app = FastAPI()
 
 # "@"" -> A Decorator. "get" -> HTTP Method for retrieving data as request. "/"" -> Path Operation
 # In case of same path operation, then the first match path outputs. Hence, Order matters.
+"""
+# Add all notes/comments here
+"""
 
 class Post(BaseModel):
     title: str
