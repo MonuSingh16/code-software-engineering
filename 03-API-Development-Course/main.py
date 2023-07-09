@@ -16,6 +16,7 @@ In case of same path operation, then the first match path outputs. Hence, Order 
 class Post(BaseModel):
     title: str
     content: str
+    body: str
 
 @app.get("/")
 async def root():
