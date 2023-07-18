@@ -35,6 +35,3 @@ def create_posts(payLoad: dict = Body(...)):
 def create_posts(new_post: Post):
     print(new_post.title)
     return {"data": "new post"}
-
-"""
-"""
