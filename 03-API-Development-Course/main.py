@@ -37,4 +37,4 @@ def create_posts(new_post: Post):
     return {"data": "new post"}
 
 """
-x"""
+"""
