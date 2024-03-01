@@ -48,6 +48,16 @@ WHERE user_id IN (
   )
 )
 GROUP BY is_monetized
+--------
+
+SELECT 
+  is_monetized, 
+  ROUND(CAST(AVG(duration_sec) as double) / 60), 2) avg_video_duration
+FROM youtube_videos a
+LEFT JOIN youtube_users b
+ON a.user_id = b.user_id
+WHERE b.country in ('US', 'UK', 'Australia')
+GROUP BY a.is_monetized
 
 --------
 
